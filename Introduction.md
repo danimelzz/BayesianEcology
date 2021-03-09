@@ -25,30 +25,6 @@ And the following probabilities:
 
 What's the probability that a person actually have HIV given a positive HIV detection by ELISA? In other words, what's P(HIV+ ∣ ELISA+)?
 
-<div style="background: ghostwhite; 
-            font-size: 15px; 
-            padding: 10px; 
-            border: 1px lightgray; 
-            margin: 10px;">
-
-Using Bayes' Theroem:
-
-P(HIV+ ∣ ELISA+) = (P(ELISA+ ∣ HIV+) * P(HIV+)) / P(ELISA+)
-
-First, let's calculate the numerator:
-
-P(ELISA + ∣ HIV+) * P(HIV+) = 0.93 * 0.00148 = 0.0013764
-
-Second, let's calculate the denominator: 
-
-P(ELISA+) = P(ELISA + ∣ HIV+)* P(HIV+) + P(ELISA + ∣ HIV-) * P(HIV-) = 0.0013764 + (1-0.99)(1-0.00148) = 0.0013764 + 0.0099852 = 0.0113616
-
-Finally:
-
-P(HIV+ ∣ ELISA+) = 0.0013764 / 0.0113616 = 0.12
-</div>
-
-
 ```
 *note: this is not a R code, but the answer for example 1*
 
@@ -92,12 +68,22 @@ P(HIV+ ∣ 2nd ELISA+) = 0.1116 / 0.1204 = 0.93
 
 **Example 3** Consider a hypothetic context in which 40 sea turtles are used in a research about the efficacy of a new treatment against fibropapillomatosis (FP). Half of the animals (20 out of 40 turtles) is placed in a control group without any medicine and the other half is allocated in treatment group with medicine (20 out of 40). In the treatment group, 4 out of 20 turtles expressed FP. In the control group, 16 out of 20 turtles expressed FP. Is the treatment effective?
 
+**R** If the treatment and control are equally effective (null hypothesis: H0), then the probability that a FP+ turtle comes from the treatment group (p) should be 0.5. If treatment is really effective (alternative hypothesis: H1), then the probability that a FP+ turtle comes from the treatment group (p) should be less than 0.5. Since H0 states that the probability of express FP is 0.5, we can calculate the p-value from 20 independent Bernoulli trials where the probability of turtles expressing FP is 0.5. The outcome of this experiment is 4 FP+ turtles out of 20, so the goal is to obtain 4 or fewer FP+ turtles in the 20 Bernoulli trials (n= 20; p=0.5).
 
+```
+#Calculate the probability 
+sum(dbinom(0:4, size = 20, p = 0.5))
+```
 
+```
+## [1] 0.005908966
+```
 
+We can conclude that the chance of turtles in the treatment group expressing FP is 0.005. Thus we reject the H0 and accept the H1. 
 
 ### 3.2 Bayesian approach using R
 
+**Example 4** Now, let's use the same data from **Example 3**
 
 
 
