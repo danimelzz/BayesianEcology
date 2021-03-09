@@ -1,5 +1,6 @@
 # Introduction to Bayesian Statistics in Ecology
-In this course, I will present an introduction to *Bayesian Statistics approach used in Ecology*.
+In this course, I will present an introduction to *Bayesian Statistics approach used in Ecology*. Tutorials were adapted from Clyde et al. (2021) for ecological examples.
+
 ![Fig1](https://github.com/danimelzz/BayesianEcology/blob/main/figures/Thomas-Bayes.jpg?raw=true)
 
 ---
@@ -11,7 +12,6 @@ Here, you'll need to install R and, if you want, R Studio to facilitate our anal
 
 ```
 #Load the following R packages
-
 library(statsr)
 library(BAS)
 library(ggplot2)
@@ -42,4 +42,5 @@ library(ggthemes)
 - Bayesian Regression: Simple vs Multiple Regressions, Uncertainty, and MCMC
 
 ## References
+Clyde, M.; Çetinkaya-Rundel, M.; Rundel, C.; Banks, D.; Chai, C.; Huang, L. (2021) An Introduction to Bayesian Thinking. Available at: https://statswithr.github.io/book/
 Ellison, A. M. (2004). Bayesian inference in ecology. Ecology letters, 7(6), 509-520.
