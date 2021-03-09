@@ -25,9 +25,13 @@ And the following probabilities:
 
 What's the probability that a person actually have HIV given a positive HIV detection by ELISA? In other words, what's P(HIV+ ∣ ELISA+)?
 
----
-rree
----
+<div style="background: ghostwhite; 
+            font-size: 20px; 
+            padding: 10px; 
+            border: 1px solid lightgray; 
+            margin: 10px;">
+  This is some dummy text.
+</div>
 
 
 ```
