@@ -1,10 +1,7 @@
 # Introduction
-
-## Bayes' rule
-
 Conditional probability is the starting point for understanding Bayesian thinking and is widely used in disease testing. During early 1980s, ELISA was comnonlly used to test whether a patient had HIV or not. However, ELISA is not 100% accurate, because some tests result in false positives (ELISA+ ∣ HIV-) and false negatives (ELISA- ∣ HIV+). This was really problematic until the invention of Western Blot tests, in which the chances of error are lower. 
 
-### Example 1. 
+### Example 1. Bayes' Theorem 
 Consider the the Bayes' Theorem: 
 ![Fig2](https://wikimedia.org/api/rest_v1/media/math/render/svg/2634e395f47aaf16f5deb5b09a979afc646d83eb)
 
@@ -15,8 +12,7 @@ And the following probabilities:
 
 What's the probability that a person actually have HIV given a positive HIV detection by ELISA? In other words, what's P(HIV+ ∣ ELISA+)?
 
-**R:** 
-Using Bayes' Theroem:
+**R:** Using Bayes' Theroem:
 - P(HIV+ ∣ ELISA+) = (P(ELISA+ ∣ HIV+) * P(HIV+)) / P(ELISA+)
 
 First, let's calculate the numerator:
@@ -28,13 +24,17 @@ Second, let's calculate the denominator:
 Finally:
 - P(HIV+ ∣ ELISA+) = 0.0013764 / 0.0113616 = 0,12
 
-### Example 2
+### Example 2. Bayes Updating
+In Example 1, we concluded that if you were positively diagnosed for HIV using ELISA test, there is only 12% of probability that you actually have HIV. However, you certainly want to have more certainty about it and thus you test your blood again. Assuming that there is an independence between the first and the second test, what is the probability of being HIV positive if also the second ELISA test comes back positive?
+
+**R:**
 
 
-| 5 | 3 | 3 | 2 |
-|---|---|---|---|
-| 2 | 4 | 1 | 1 |
 
+|        |  HIV+ |  HIV- |
+|--------|-------|-------|
+| ELISA+ |   3   |   1   |
+| ELISA- |   4   |   1   |
 
 
 
