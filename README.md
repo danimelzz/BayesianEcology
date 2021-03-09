@@ -8,6 +8,15 @@ Here, you'll need to install R and, if you want, R Studio to facilitate our anal
 - [Daniel Y. M. Nakamura](http://www.instagram.com/danimelzz) 
 
 # Lessons
-- 1.
-- 2.
-- 3. 
+- 1. Introduction
+-- Frequentist vs Bayesian
+-- Bayes' Rule
+-- and Inference for proportions
+
+- 2. Bayesian Inference
+Continuous Variables, and Credible Intervals
+
+- 3. Decision Making
+Losses, Normal Data, and Comparing Normal Means
+
+- 4. Bayesian Regression: Simple vs Multiple Regressions, 
