@@ -66,7 +66,9 @@ P(HIV+ ∣ 2nd ELISA+) = 0.1116 / 0.1204 = 0.93
 ### 3.1 Frequentist approach using R
 <div style="text-align:center"><img src="https://oliveridleyproject.org/wp-content/uploads/2019/06/Green-turtle-with-fibropapillomatosis-tumors-Kenya.jpg" /></div>
 
-Consider a hypothetic context in which 40 sea turtles are used in a research about the efficacy of a new treatment against fibropapillomatosis. 20 out of 40 turtles are separated in control group and 20 out of 40 are allocated into treatment group. In the treatment group, 4 out of 20 expressed the disease. 
+**Example 3** Consider a hypothetic context in which 40 sea turtles are used in a research about the efficacy of a new treatment against fibropapillomatosis (FP). Half of the animals (20 out of 40 turtles) is placed in a control group without any medicine and the other half is allocated in treatment group with medicine (20 out of 40). In the treatment group, 4 out of 20 turtles expressed FP. In the control group, 16 out of 20 turtles expressed FP. Is the treatment effective?
+
+
 
 
 
