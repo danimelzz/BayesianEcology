@@ -133,3 +133,11 @@ sum (posterior)
 The model with p=0.2 has the highest posterior probability (=0.42). This is not surprising, because 4 out of 20 FP+ turtles from treatment group equals to 20%. Therefore, it's likely that there are differences between the efficacy of treatment and control groups. Note that posterior probability of p=0.5 dropped from 52% (prior belief) to 7.8% (posterior), which demonstrates how we update our beliefs.  
 
 ### 3.3 Sample size affects posterior probabilities
+
+## 4. Resolving an ecological problem: Frequentist vs Bayesian approaches
+
+### 4.1 Frequentist
+
+### 4.2 Bayesian
+
+
