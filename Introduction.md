@@ -1,5 +1,13 @@
 # Introduction
-The principal differences between **frequentist and Bayesian** approaches lies on the probability definition. In frequentist context, probability is the proportion of times that an event occurs in an infinite number of times. In Bayesian context, probability is the belief degree, in which we generate posterior probabilities based on prior information (belief). Thus, it's rationable that different probability definitions result in different methods of inference. 
+
+## Bayesian vs Frequentist
+The principal differences between **frequentist and Bayesian** approaches lies on the probability definition. In frequentist context, probability is the proportion of times that an event occurs in an infinite number of times. In Bayesian context, probability is the belief degree, in which we generate posterior probabilities based on prior information (belief). Thus, it's rationable that different probability definitions result in different methods of inference: 
+
+-Frequentist inference: describes the confidence level as the proportion of random samples from the same population that produced confidence intervals which contain the true population parameter; 
+
+- Bayesian inference
+
+## Bayes' Theorem and Updating
 
 Conditional probability is the starting point for understanding Bayesian thinking and is widely used in disease testing. During early 1980s, ELISA was commonly used to test whether a patient had HIV or not. However, ELISA is not 100% accurate, because some tests result in false positives (ELISA+ ∣ HIV-) and false negatives (ELISA- ∣ HIV+). This was really problematic until the invention of Western Blot tests, in which the chances of error are lower. 
 
