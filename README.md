@@ -7,7 +7,8 @@ In this course, I will present an introduction to *Bayesian Statistics approach 
 Here, you'll need to install R and, if you want, R Studio to facilitate our analyses. The following R packages will be loaded to perform the tutorials.
 
 ```
-# Load the following R packages
+#Load the following R packages
+
 library(statsr)
 library(BAS)
 library(ggplot2)
@@ -36,3 +37,6 @@ library(ggthemes)
 - Decision Making: Losses, Normal Data, and Comparing Normal Means
 
 - Bayesian Regression: Simple vs Multiple Regressions, Uncertainty, and MCMC
+
+## References
+
