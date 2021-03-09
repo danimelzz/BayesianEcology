@@ -48,4 +48,4 @@ library(ggthemes)
 
 - Ellison, A. M. (2004). Bayesian inference in ecology. Ecology letters, 7(6), 509-520.
 
-![Fig2](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bayes%27_Theorem_MMB_01.jpg/640px-Bayes%27_Theorem_MMB_01.jpg)
+![Fig2](https://upload.wikimedia.org/wikipedia/commons/8/87/Perereca-verde_-_Hypsiboas_atlanticus.jpg)
