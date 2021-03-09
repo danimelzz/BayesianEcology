@@ -1,6 +1,8 @@
 # Introduction to Bayesian Statistics in Ecology
 In this course, I will present an introduction to *Bayesian Statistics approach used in Ecology*.
 
+![Fig1](https://github.com/danimelzz/BayesianEcology/blob/main/figures/Thomas-Bayes.jpg?raw=true)
+
 # Materials
 Here, you'll need to install R and, if you want, R Studio to facilitate our analyses. R packages will be specified before each tutorial.  
 
