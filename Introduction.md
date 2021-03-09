@@ -90,8 +90,23 @@ We can conclude that the chance of turtles in the treatment group expressing FP 
 |-------------------------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
 | PRIOR P(model)          |  0.06 |  0.06 |  0.06 |  0.06 |  0.52 |  0.06 |  0.06 |  0.06 |  0.06 |
 
+This prior incorporates two beliefs: the probability of p=0.5 is highest, and the benefit of the treatment is symmetric. 
 
-| LIKELIHOOD P(data|model)|   4   |   1   |  0.30 |  0.40 |  0.50 |  0.60 |  0.70 |  0.80 |  0.90 |
+If we have multiple prior probabilities, we need to calculate the likelihood for each model in order to obtain the posterior probabilities. Given that the likelihood is P (data|model) = P (k=4 | n=20, p), let's calculate it in R:
+
+```
+## Calculate likelihood
+p <- seq(from=0.1, to=0.9, by=0.1)
+prior <- c(rep(0.06, 4), 0.52m rep(0.06, 4))
+likelihood <- dbinom(4, size=20, prob=p)
+```
+| MODEL                   |  0.10 |  0.20 |  0.30 |  0.40 |  0.50 |  0.60 |  0.70 |  0.80 |  0.90 |
+|-------------------------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+| PRIOR P(model)          |  0.06 |  0.06 |  0.06 |  0.06 |  0.52 |  0.06 |  0.06 |  0.06 |  0.06 |
+| LIKELIHOOD P(data|model)| 0.0898|	0.2182|	0.1304|	0.0350|	0.0046|	0.0003|  0.00 |	 0.00	|  0.00 |
+
+
+
 | P(data|model) x P(model)|
 | Posterior P(model|data) |
 
