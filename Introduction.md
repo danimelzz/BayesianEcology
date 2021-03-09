@@ -11,18 +11,18 @@ Conditional probability is the starting point for understanding Bayesian thinkin
 
 What's the probability that a person actually have HIV given a positive HIV detection by ELISA (i.e., P(HIV+ ∣ ELISA+))?
 
-**R:** First, we need to remember the conditional probability formula:
-![Fig1](https://dzone.com/storage/temp/8481793-screen-shot-2018-03-14-at-33548-pm.png)
+**R:** First, we need to remember the Bayes' Theorem:
+
+![Fig2](https://wikimedia.org/api/rest_v1/media/math/render/svg/2634e395f47aaf16f5deb5b09a979afc646d83eb)
 
 Now, we can calculate it:
-P(HIV+ ∣ ELISA+) = P(HIV+ & ELISA+) / P(ELISA+)
-P
-
-
-Bayes' Rule
-![Fig2](https://wikimedia.org/api/rest_v1/media/math/render/svg/2634e395f47aaf16f5deb5b09a979afc646d83eb)
- 
-
+P(HIV+ ∣ ELISA+) = (P(ELISA+ ∣ HIV+) * P(HIV+)) / P(ELISA+)
+P(ELISA + ∣ HIV+) * P(HIV+) = 0.93 * 0.00148 = 0.0013764
+P(ELISA+) = P(ELISA + ∣ HIV+)* P(HIV+) + P(ELISA + ∣ HIV-) * P(HIV-) = 0,0013764 + (1-0.99)(1-0.00148) = 0,0013764 + 0,0099852 = 0.0113616
+∴ P(HIV+ ∣ ELISA+) = 0.0013764 / 0.0113616 = 0,12
+0.0099852
+=
+0.0113616
 
 
 | 5 | 3 | 3 | 2 |
