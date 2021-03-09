@@ -47,5 +47,3 @@ library(ggthemes)
 - Clyde, M.; Çetinkaya-Rundel, M.; Rundel, C.; Banks, D.; Chai, C.; Huang, L. (2021) An Introduction to Bayesian Thinking. Available at: https://statswithr.github.io/book/
 
 - Ellison, A. M. (2004). Bayesian inference in ecology. Ecology letters, 7(6), 509-520.
-
-![Fig2](https://upload.wikimedia.org/wikipedia/commons/8/87/Perereca-verde_-_Hypsiboas_atlanticus.jpg)
