@@ -11,11 +11,17 @@ Conditional probability is the starting point for understanding Bayesian thinkin
 
 What's the probability that a person actually have HIV given a positive HIV detection by ELISA (i.e., P(HIV+ ∣ ELISA+))?
 
-**R:** First, we need to remember the Bayes' Rule
-![Fig1](https://wikimedia.org/api/rest_v1/media/math/render/svg/2634e395f47aaf16f5deb5b09a979afc646d83eb)
- 
+**R:** First, we need to remember the conditional probability formula:
+! [Fig1](https://miro.medium.com/max/4308/1*LtZSN0giQCVzYHDe1fh25w.png)
+
 Now, we can calculate it:
-P(HIV+ ∣ ELISA+) = P(ELISA+ ∣ HIV+)
+P(HIV+ ∣ ELISA+) = P(HIV+ & ELISA+) / P(ELISA+)
+P
+
+
+Bayes' Rule
+![Fig2](https://wikimedia.org/api/rest_v1/media/math/render/svg/2634e395f47aaf16f5deb5b09a979afc646d83eb)
+ 
 
 
 
@@ -25,20 +31,6 @@ P(HIV+ ∣ ELISA+) = P(ELISA+ ∣ HIV+)
 
 
 
-# Load the following R packages
-library(statsr)
-library(BAS)
-library(ggplot2)
-library(dplyr)
-library(BayesFactor)
-library(knitr)
-library(rjags)
-library(coda) 
-library(latex2exp)
-library(foreign)
-library(BHH2)
-library(scales)
-library(logspline)
-library(cowplot)
-library(ggthemes)
+
+```
 ```
