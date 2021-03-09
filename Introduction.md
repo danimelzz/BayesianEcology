@@ -12,7 +12,10 @@ And the following probabilities:
 
 What's the probability that a person actually have HIV given a positive HIV detection by ELISA? In other words, what's P(HIV+ ∣ ELISA+)?
 
-**R:** Using Bayes' Theroem:
+**R:**
+
+```
+Using Bayes' Theroem:
 - P(HIV+ ∣ ELISA+) = (P(ELISA+ ∣ HIV+) * P(HIV+)) / P(ELISA+)
 
 First, let's calculate the numerator:
@@ -23,6 +26,7 @@ Second, let's calculate the denominator:
 
 Finally:
 - P(HIV+ ∣ ELISA+) = 0.0013764 / 0.0113616 = 0.12
+```
 
 ### Example 2. Bayes Updating
 In Example 1, we concluded that if you were positively diagnosed for HIV using ELISA test, there is only 12% of probability that you actually have HIV. However, you certainly want to have more certainty about it and thus you test your blood again. Assuming that there is an independence between the first and the second test, what is the probability of being HIV positive if also the second ELISA test comes back positive?
