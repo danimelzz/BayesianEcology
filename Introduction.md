@@ -3,7 +3,7 @@
 ## Bayes' rule
 Conditional probability is the starting point for understanding Bayesian thinking and is widely used in disease testing. During early 1980s, ELISA was comnonlly used to test whether a pacient had HIV or not. However, ELISA is not 100% accurate: 
 
-P(\text{ELISA is positive} \mid \text{Person tested has HIV}) = 93\% = 0.93.
+![equation](https://latex.codecogs.com/gif.latex?1%2Bsin%28mc%5E2%29%0D%0A)
 
 | 5 | 3 | 3 | 2 |
 |---|---|---|---|
