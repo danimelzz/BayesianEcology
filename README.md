@@ -44,7 +44,8 @@ library(ggthemes)
 - Bayesian Regression: Simple vs Multiple Regressions, Uncertainty, and MCMC
 
 ## References
-Clyde, M.; Çetinkaya-Rundel, M.; Rundel, C.; Banks, D.; Chai, C.; Huang, L. (2021) An Introduction to Bayesian Thinking. Available at: https://statswithr.github.io/book/
-Ellison, A. M. (2004). Bayesian inference in ecology. Ecology letters, 7(6), 509-520.
+- Clyde, M.; Çetinkaya-Rundel, M.; Rundel, C.; Banks, D.; Chai, C.; Huang, L. (2021) An Introduction to Bayesian Thinking. Available at: https://statswithr.github.io/book/
+
+- Ellison, A. M. (2004). Bayesian inference in ecology. Ecology letters, 7(6), 509-520.
 
 ![Fig2](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bayes%27_Theorem_MMB_01.jpg/640px-Bayes%27_Theorem_MMB_01.jpg)
