@@ -1,6 +1,6 @@
 # Introduction
 
-## Bayesian vs Frequentist
+## 1. Bayesian vs Frequentist
 ![Fig1](https://miro.medium.com/max/1932/0*eqNjjx0pcgm4_GPU.png)
 
 The principal differences between **frequentist and Bayesian** approaches lies on the probability definition. In frequentist context, probability is the proportion of times that an event occurs in an infinite number of times. In Bayesian context, probability is the belief degree, in which we generate posterior probabilities based on prior information (belief). Thus it's rationable that different probability definitions result in different methods of inference: 
@@ -9,12 +9,12 @@ The principal differences between **frequentist and Bayesian** approaches lies o
 
 - Bayesian inference: describes uncertainty as probability. Thus a Bayesian can say that there is a 95% chance that the credible interval contains the true parameter value.
 
-## Bayes' Theorem and Updating
+## 2. Bayes' Theorem and Updating
 
 Conditional probability is the starting point for understanding Bayesian thinking and is widely used in disease testing. During early 1980s, ELISA was commonly used to test whether a patient had HIV or not. However, ELISA is not 100% accurate, because some tests result in false positives (ELISA+ ∣ HIV-) and false negatives (ELISA- ∣ HIV+). This was really problematic until the invention of Western Blot tests, in which the chances of error are lower. 
 
-### Example 1. Bayes' Theorem 
-Consider the Bayes' Theorem: 
+### 2.1. Bayes' Theorem 
+**Example 1** Consider the Bayes' Theorem: 
 
 ![Fig2](https://wikimedia.org/api/rest_v1/media/math/render/svg/2634e395f47aaf16f5deb5b09a979afc646d83eb)
 
@@ -26,6 +26,8 @@ And the following probabilities:
 What's the probability that a person actually have HIV given a positive HIV detection by ELISA? In other words, what's P(HIV+ ∣ ELISA+)?
 
 ```
+*note: this is not a R code, but the answer for example 1*
+
 Using Bayes' Theroem:
 P(HIV+ ∣ ELISA+) = (P(ELISA+ ∣ HIV+) * P(HIV+)) / P(ELISA+)
 
@@ -39,10 +41,12 @@ Finally:
 P(HIV+ ∣ ELISA+) = 0.0013764 / 0.0113616 = 0.12
 ```
 
-### Example 2. Bayes Updating
-In Example 1, we concluded that if you were positively diagnosed for HIV using ELISA test, there is only 12% of probability that you actually have HIV. However, you certainly want to have more certainty about it and thus you test your blood again. Assuming that there is an independence between the first and the second test, what is the probability of being HIV positive if also the second ELISA test comes back positive?
+### 2.2. Bayes Updating
+**Example 2** In Example 1, we concluded that if you were positively diagnosed for HIV using ELISA test, there is only 12% of probability that you actually have HIV. However, you certainly want to have more certainty about it and thus you test your blood again. Assuming that there is an independence between the first and the second test, what is the probability of being HIV positive if also the second ELISA test comes back positive?
 
 ```
+*note: this is not a R code, but the answer for example 2*
+
 First, it's important to know that the posterior probability obtained in the previous iteration (Example 1) will be the prior information in the Bayes updating. In other words, now we will have P(HIV+) = 0.12. 
 
 Using Bayes' Theorem:
@@ -57,6 +61,14 @@ P(ELISA+) =  P(ELISA + ∣ HIV+)* P(HIV+) + P(ELISA + ∣ HIV-) * P(HIV-) = 0.11
 Finally:
 P(HIV+ ∣ 2nd ELISA+) = 0.1116 / 0.1204 = 0.93
 ```
+
+## 3. Inference for proportions
+### 3.1 Frequentist approach using R
+Consider a hypothetic context in which male sea turtles are trying breed with females. However, the reproductive success rate is 16 out of 20.
+
+### 3.2 Bayesian approach using R
+
+
 
 
 
