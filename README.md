@@ -35,7 +35,7 @@ library(ggthemes)
 - [Daniel Y. M. Nakamura](http://www.instagram.com/danimelzz) 
 
 ## Lessons
-- [Introduction: Frequentist vs Bayesian, Bayes' Rule, and Inference for proportions](https://github.com/danimelzz/BayesianEcology/blob/95a4ff2f6b46ea9885b74f225ac599c3fc45de33/Introduction.md)<br>
+- [Introduction: Frequentist vs Bayesian, Bayes' Rule, and Inference for proportions](https://danimelzz.github.io/BayesianEcology/Introduction)<br>
 
 - Bayesian Inference: Continuous Variables and Credible Intervals
 
