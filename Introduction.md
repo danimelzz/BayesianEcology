@@ -11,7 +11,9 @@ knitr::kable(
   caption = 'Results from a 2015 Gallup poll on the use of online dating sites by age group'
 )
 ```
-
+| 5 | 3 | 3 | 2 |
+|---|---|---|---|
+| 2 | 4 | 1 | 1 |
 ## 
 
 ```
