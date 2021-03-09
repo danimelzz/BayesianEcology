@@ -123,11 +123,13 @@ sum (posterior)
 [1] 1
 ```
 
-| MODEL                     |  0.10 |  0.20 |  0.30 |  0.40 |  0.50 |  0.60 |  0.70 |  0.80 |  0.90 |
+| Model                     |  0.10 |  0.20 |  0.30 |  0.40 |  0.50 |  0.60 |  0.70 |  0.80 |  0.90 |
 |---------------------------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| PRIOR P(model)            |   0.06|   0.06|   0.06|   0.06|   0.52|   0.06|   0.06|   0.06|   0.06|
-| LIKELIHOOD P(data I model)| 0.0898|	0.2182|	0.1304|	0.0350|	0.0046|	0.0003|  0.00 |	 0.00	|   0.00|
+| Prior P(model)            |   0.06|   0.06|   0.06|   0.06|   0.52|   0.06|   0.06|   0.06|   0.06|
+| Likelihood P(data I model)| 0.0898|	0.2182|	0.1304|	0.0350|	0.0046|	0.0003|  0.00 |	 0.00	|   0.00|
 | P(data I model) x P(model)| 0.0054| 0.0131|	0.0078|	0.0021|	0.0024|	0.0000|	  0.00|  0.00	|   0.00|
 | Posterior P(model I data) | 0.1748|	0.4248|	0.2539|	0.0681|	0.0780|	0.0005|	  0.00|	  0.00| 	0.00|
 
 The model with p=0.2 has the highest posterior probability (=0.42). This is not surprising, because 4 out of 20 FP+ turtles from treatment group equals to 20%. Therefore, it's likely that there are differences between the efficacy of treatment and control groups. Note that posterior probability of p=0.5 dropped from 52% (prior belief) to 7.8% (posterior), which demonstrates how we update our beliefs.  
+
+### 3.3 Sample size affects posterior probabilities
