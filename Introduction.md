@@ -1,16 +1,10 @@
 # Introduction
 
 ## Bayes' rule
-```{r 2015gallupDating, echo = FALSE}
-temp <- matrix(c(60, 86, 58, 21, 225, 255, 426, 450, 382, 1513, 315, 512, 508, 403, 1738), nrow = 3, byrow = TRUE)
-rownames(temp) <- c('Used online dating site', 'Did not use online dating site', 'Total')
-colnames(temp) <- c('18-29', '30-49', '50-64', '65+', 'Total')
-knitr::kable(
-  x = temp,
-  booktabs = TRUE,
-  caption = 'Results from a 2015 Gallup poll on the use of online dating sites by age group'
-)
-```
+Conditional probability is the starting point for understanding Bayesian thinking and is widely used in disease testing. During early 1980s, ELISA was comnonlly used to test whether a pacient had HIV or not. However, ELISA is not 100% accurate: 
+
+P(\text{ELISA is positive} \mid \text{Person tested has HIV}) = 93\% = 0.93.
+
 | 5 | 3 | 3 | 2 |
 |---|---|---|---|
 | 2 | 4 | 1 | 1 |
