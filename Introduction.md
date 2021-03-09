@@ -15,10 +15,10 @@ And the Bayes' Theorem:
 What's the probability that a person actually have HIV given a positive HIV detection by ELISA (i.e., P(HIV+ ∣ ELISA+))?
 
 **R:**  We can calculate it as:
--P(HIV+ ∣ ELISA+) = (P(ELISA+ ∣ HIV+) * P(HIV+)) / P(ELISA+)
--P(ELISA + ∣ HIV+) * P(HIV+) = 0.93 * 0.00148 = 0.0013764
--P(ELISA+) = P(ELISA + ∣ HIV+)* P(HIV+) + P(ELISA + ∣ HIV-) * P(HIV-) = 0,0013764 + (1-0.99)(1-0.00148) = 0,0013764 + 0,0099852 = 0.0113616
--∴ P(HIV+ ∣ ELISA+) = 0.0013764 / 0.0113616 = 0,12
+- P(HIV+ ∣ ELISA+) = (P(ELISA+ ∣ HIV+) * P(HIV+)) / P(ELISA+)
+- P(ELISA + ∣ HIV+) * P(HIV+) = 0.93 * 0.00148 = 0.0013764
+- P(ELISA+) = P(ELISA + ∣ HIV+)* P(HIV+) + P(ELISA + ∣ HIV-) * P(HIV-) = 0,0013764 + (1-0.99)(1-0.00148) = 0,0013764 + 0,0099852 = 0.0113616
+- ∴ P(HIV+ ∣ ELISA+) = 0.0013764 / 0.0113616 = 0,12
 
 
 
