@@ -25,6 +25,11 @@ And the following probabilities:
 
 What's the probability that a person actually have HIV given a positive HIV detection by ELISA? In other words, what's P(HIV+ ∣ ELISA+)?
 
+---
+rree
+---
+
+
 ```
 *note: this is not a R code, but the answer for example 1*
 
