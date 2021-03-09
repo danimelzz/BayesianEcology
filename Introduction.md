@@ -1,11 +1,11 @@
 # Introduction
 
 ## Bayesian vs Frequentist
-The principal differences between **frequentist and Bayesian** approaches lies on the probability definition. In frequentist context, probability is the proportion of times that an event occurs in an infinite number of times. In Bayesian context, probability is the belief degree, in which we generate posterior probabilities based on prior information (belief). Thus, it's rationable that different probability definitions result in different methods of inference: 
+The principal differences between **frequentist and Bayesian** approaches lies on the probability definition. In frequentist context, probability is the proportion of times that an event occurs in an infinite number of times. In Bayesian context, probability is the belief degree, in which we generate posterior probabilities based on prior information (belief). Thus it's rationable that different probability definitions result in different methods of inference: 
 
--Frequentist inference: describes the confidence level as the proportion of random samples from the same population that produced confidence intervals which contain the true population parameter; 
+-Frequentist inference: describes the confidence level as the proportion of random samples from the same population that produces confidence intervals which contain the true population parameter. Thus a frequentist cannot say "I'm 95% confident that 60% to 70% of Brazilians think that neoliberalism will increase our social inequality", because the probability that a CI captures the population parameter is either 0 or 1. The correct interpretation is "95% of random samples will capture the CI within which the population parameter (e.g., the proportion of Brazilians who think neoliberalism is socially terrible) is included.
 
-- Bayesian inference
+- Bayesian inference: describes uncertainty as probability. Thus a Bayesian can say that there is a 95% chance that the credible interval contains the true parameter value.
 
 ## Bayes' Theorem and Updating
 
