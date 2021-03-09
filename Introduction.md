@@ -14,7 +14,7 @@ The principal differences between **frequentist and Bayesian** approaches lies o
 Conditional probability is the starting point for understanding Bayesian thinking and is widely used in disease testing. During early 1980s, ELISA was commonly used to test whether a patient had HIV or not. However, ELISA is not 100% accurate, because some tests result in false positives (ELISA+ ∣ HIV-) and false negatives (ELISA- ∣ HIV+). This was really problematic until the invention of Western Blot tests, in which the chances of error are lower. 
 
 ### 2.1. Bayes' Theorem 
-**Example 1** Consider the Bayes' Theorem: 
+**Example 1.** Consider the Bayes' Theorem: 
 
 ![Fig2](https://wikimedia.org/api/rest_v1/media/math/render/svg/2634e395f47aaf16f5deb5b09a979afc646d83eb)
 
@@ -42,7 +42,7 @@ P(HIV+ ∣ ELISA+) = 0.0013764 / 0.0113616 = 0.12
 ```
 
 ### 2.2. Bayes Updating
-**Example 2** In Example 1, we concluded that if you were positively diagnosed for HIV using ELISA test, there is only 12% of probability that you actually have HIV. However, you certainly want to have more certainty about it and thus you test your blood again. Assuming that there is an independence between the first and the second test, what is the probability of being HIV positive if also the second ELISA test comes back positive?
+**Example 2.** In Example 1, we concluded that if you were positively diagnosed for HIV using ELISA test, there is only 12% of probability that you actually have HIV. However, you certainly want to have more certainty about it and thus you test your blood again. Assuming that there is an independence between the first and the second test, what is the probability of being HIV positive if also the second ELISA test comes back positive?
 
 ```
 *note: this is not a R code, but the answer for example 2*
@@ -66,9 +66,9 @@ P(HIV+ ∣ 2nd ELISA+) = 0.1116 / 0.1204 = 0.93
 ### 3.1 Frequentist approach using R
 <div style="text-align:center"><img src="https://oliveridleyproject.org/wp-content/uploads/2019/06/Green-turtle-with-fibropapillomatosis-tumors-Kenya.jpg" /></div>
 
-**Example 3** Consider a hypothetic context in which 40 sea turtles are used in a research about the efficacy of a new treatment against fibropapillomatosis (FP). Half of the animals (20 out of 40 turtles) is placed in a control group without any medicine and the other half is allocated in treatment group with medicine (20 out of 40). In the treatment group, 4 out of 20 turtles expressed FP. In the control group, 16 out of 20 turtles expressed FP. Is the treatment effective?
+**Example 3.** Consider a hypothetic context in which 40 sea turtles are used in a research about the efficacy of a new treatment against fibropapillomatosis (FP). Half of the animals (20 out of 40 turtles) is placed in a control group without any medicine and the other half is allocated in treatment group with medicine (20 out of 40). In the treatment group, 4 out of 20 turtles expressed FP. In the control group, 16 out of 20 turtles expressed FP. Is this treatment effective?
 
-**R:** If the treatment and control are equally effective (null hypothesis: H0), then the probability that a FP+ turtle comes from the treatment group (p) should be 0.5. If treatment is really effective (alternative hypothesis: H1), then the probability that a FP+ turtle comes from the treatment group (p) should be less than 0.5. Since H0 states that the probability of express FP is 0.5, we can calculate the p-value from 20 independent Bernoulli trials where the probability of turtles expressing FP is 0.5. The outcome of this experiment is 4 FP+ turtles out of 20, so the goal is to obtain 4 or fewer FP+ turtles in the 20 Bernoulli trials (n = 20; k = 4; p = 0.5).
+**R:** If no efficacy differences are found between the treatment and control groups (null hypothesis: H0), then the probability that a FP+ turtle comes from the treatment group (p) should be 0.5. If treatment is more effective than control (alternative hypothesis: H1), then the probability that a FP+ turtle comes from the treatment group (p) should be less than 0.5. Since H0 states that the probability of express FP is 0.5, we can calculate the p-value from 20 independent Bernoulli trials where the probability of turtles expressing FP is 0.5. The outcome of this experiment is 4 FP+ turtles out of 20, so the goal is to obtain 4 or fewer FP+ turtles in the 20 Bernoulli trials (n = 20; k = 4; p = 0.5).
 
 ```
 #Calculate the probability 
@@ -79,21 +79,21 @@ sum(dbinom(0:4, size = 20, p = 0.5))
 ## [1] 0.005908966
 ```
 
-We can conclude that the chance of turtles in the treatment group expressing FP is 0.005. Thus we reject the H0 and accept the H1. 
+We can conclude that the chance of turtles in the treatment group expressing FP is 0.005. Thus we reject the H0 and accept the H1. The treatment is effective against FP according to frequentist inference.
 
 ### 3.2 Bayesian approach using R
 
-**Example 4** Now, let's use the same data from **Example 3** (n = 20; k = 4; p = 0.5) to perform a Bayesian Inference. If there isn't any difference between the treatment and control groups, the probability that a FP+ turtle comes from treatment is 0.5 (p=0.5) for null hypothesis in a frequentist framework. In contrast, Bayesian framework assumes some prior parameters on the models: p can take on any value between 0 and 1. Let's simplify it assuming that p varies from 10%, 20%, 30%, up to 90%, in which p = 10% means that among 10 FP+ turtles, it is expected that 2 FP+ turtles come from treatment group. The nine models that we generated are presented below: 
+**Example 4.** Now, let's use the same data from **Example 3** (n = 20; k = 4; p = 0.5) to perform a Bayesian Inference. If there isn't any difference between the treatment and control groups, the probability that a FP+ turtle comes from treatment is 0.5 (p=0.5) for null hypothesis in a frequentist framework. In contrast, Bayesian framework assumes some prior parameters on the models: p can take on any value between 0 and 1. Let's simplify it assuming that p varies from 10%, 20%, 30%, up to 90%, in which p = 10% means that among 10 FP+ turtles, it is expected that 2 FP+ turtles come from treatment group. Suppose the prior probabilities for each of the nine models presented below: 
 
 
-|  MODEL                  |  0.10 |  0.20 |  0.30 |  0.40 |  0.50 |  0.60 |  0.70 |  0.80 |  0.90 |
+| MODEL                   |  0.10 |  0.20 |  0.30 |  0.40 |  0.50 |  0.60 |  0.70 |  0.80 |  0.90 |
 |-------------------------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|PRIOR(P)                 |  0.06 |  0.06 |  0.06 |  0.06 |  0.52 |  0.06 |  0.06 |  0.06 |  0.06 |
+| PRIOR P(model)          |  0.06 |  0.06 |  0.06 |  0.06 |  0.52 |  0.06 |  0.06 |  0.06 |  0.06 |
 
 
-| LIKELIHOODP(data|model) |   4   |   1   |  0.30 |  0.40 |  0.50 |  0.60 |  0.70 |  0.80 |  0.90 |
-
-
+| LIKELIHOOD P(data|model)|   4   |   1   |  0.30 |  0.40 |  0.50 |  0.60 |  0.70 |  0.80 |  0.90 |
+| P(data|model) x P(model)|
+| Posterior P(model|data) |
 
 ```
 ```
