@@ -2,7 +2,8 @@
 Conditional probability is the starting point for understanding Bayesian thinking and is widely used in disease testing. During early 1980s, ELISA was commonly used to test whether a patient had HIV or not. However, ELISA is not 100% accurate, because some tests result in false positives (ELISA+ ∣ HIV-) and false negatives (ELISA- ∣ HIV+). This was really problematic until the invention of Western Blot tests, in which the chances of error are lower. 
 
 ### Example 1. Bayes' Theorem 
-Consider the the Bayes' Theorem: 
+Consider the Bayes' Theorem: 
+
 ![Fig2](https://wikimedia.org/api/rest_v1/media/math/render/svg/2634e395f47aaf16f5deb5b09a979afc646d83eb)
 
 And the following probabilities:
@@ -38,7 +39,10 @@ First, let's calculate the numerator:
 - P(ELISA+ ∣ HIV+) * P(HIV+) = 0.93 * 0.12 = 0.1116
 
 Second, let's calculate the denominator:
-- P
+- P(ELISA+) =  P(ELISA + ∣ HIV+)* P(HIV+) + P(ELISA + ∣ HIV-) * P(HIV-) = 0.1116 + (1-0.99)(1-0.12) = 0.1116 + 0.0088 = 0.1204
+
+Finally:
+- P(HIV+ ∣ 2nd ELISA+) = 0.1116 / 0.1204 = 0.93
 
 
 
