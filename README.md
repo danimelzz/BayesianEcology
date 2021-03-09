@@ -9,9 +9,9 @@ Here, you'll need to install R and, if you want, R Studio to facilitate our anal
 
 # Lessons
 - 1. Introduction
--- Frequentist vs Bayesian
--- Bayes' Rule
--- and Inference for proportions
+Frequentist vs Bayesian
+Bayes' Rule
+and Inference for proportions
 
 - 2. Bayesian Inference
 Continuous Variables, and Credible Intervals
