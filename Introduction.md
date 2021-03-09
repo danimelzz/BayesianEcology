@@ -83,7 +83,7 @@ We can conclude that the chance of turtles in the treatment group expressing FP 
 
 ### 3.2 Bayesian approach using R
 
-**Example 4.** Now, let's use the same data from **Example 3** (n = 20; k = 4; p = 0.5) to perform a Bayesian Inference. If there isn't any difference between the treatment and control groups, the probability that a FP+ turtle comes from treatment is 0.5 (p=0.5) for null hypothesis in a frequentist framework. In contrast, Bayesian framework assumes some prior parameters on the models: p can take on any value between 0 and 1. Let's simplify it assuming that p varies from 10%, 20%, 30%, up to 90%, in which p = 10% means that among 10 FP+ turtles, it is expected that 2 FP+ turtles come from treatment group. Suppose the prior probabilities for each of the nine models presented below: 
+**Example 4.** Now, let's use the same data from **Example 3** (n = 20; k = 4; p = 0.5) to perform a Bayesian Inference. If there isn't any difference between the treatment and control groups, the probability that a FP+ turtle comes from treatment is 0.5 (p=0.5) for null hypothesis in a frequentist framework. In contrast, Bayesian framework assumes some prior parameters on the models: p can take on any value between 0 and 1. Let's simplify it assuming that p varies from 10%, 20%, 30%, up to 90%, in which p = 10% means that among 20 FP+ turtles, it is expected that 2 FP+ turtles come from treatment group. Suppose the prior probabilities for each of the nine models presented below: 
 
 
 | MODEL                   |  0.10 |  0.20 |  0.30 |  0.40 |  0.50 |  0.60 |  0.70 |  0.80 |  0.90 |
@@ -92,22 +92,35 @@ We can conclude that the chance of turtles in the treatment group expressing FP 
 
 This prior incorporates two beliefs: the probability of p=0.5 is highest, and the benefit of the treatment is symmetric. 
 
-Do you emember the Bayes' Theorem?
+Do you remember the Bayes' Theorem? We need to calculate the numerator (likelihood and prior information) and denominator (P data).
 
 ![Fig2](https://wikimedia.org/api/rest_v1/media/math/render/svg/2634e395f47aaf16f5deb5b09a979afc646d83eb)
 
 When we have multiple prior probabilities, we need to calculate the likelihood for each model in order to obtain the posterior probabilities. Given that the likelihood is P (data|model) = P (k=4 | n=20, p), let's calculate it in R:
 
 ```
-## Calculate likelihood
+## Calculating likelihood
 p <- seq(from=0.1, to=0.9, by=0.1)
 prior <- c(rep(0.06, 4), 0.52m rep(0.06, 4))
 likelihood <- dbinom(4, size=20, prob=p)
+likelihood
 ```
 
 ```
 [1] 8.977883e-02 2.181994e-01 1.304210e-01 3.499079e-02 4.620552e-03 2.696862e-04 5.007558e-06
 [8] 1.300570e-08 3.178804e-13
+```
+
+```
+## Calculating posterior
+numerator <- prior * likelihood
+denominator <- sum (numerator)
+posterior <- numerator / denominator
+sum (posterior)
+```
+
+```
+[1] 1
 ```
 
 | MODEL                     |  0.10 |  0.20 |  0.30 |  0.40 |  0.50 |  0.60 |  0.70 |  0.80 |  0.90 |
@@ -116,3 +129,5 @@ likelihood <- dbinom(4, size=20, prob=p)
 | LIKELIHOOD P(data I model)| 0.0898|	0.2182|	0.1304|	0.0350|	0.0046|	0.0003|  0.00 |	 0.00	|   0.00|
 | P(data I model) x P(model)| 0.0054| 0.0131|	0.0078|	0.0021|	0.0024|	0.0000|	  0.00|  0.00	|   0.00|
 | Posterior P(model I data) | 0.1748|	0.4248|	0.2539|	0.0681|	0.0780|	0.0005|	  0.00|	  0.00| 	0.00|
+
+The model with p=0.2 has the highest posterior probability (=0.42). This is not surprising, because 4 out of 20 FP+ turtles from treatment group equals to 20%. Therefore, it's likely that there are differences between the efficacy of treatment and control groups. Note that posterior probability of p=0.5 dropped from 52% (prior belief) to 7.8% (posterior), which demonstrates how we update our beliefs.  
