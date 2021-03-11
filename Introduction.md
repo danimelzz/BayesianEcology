@@ -134,10 +134,5 @@ The model with p=0.2 has the highest posterior probability (=0.42). This is not 
 
 ### 3.3 Sample size affects posterior probabilities
 
-## 4. Resolving an ecological problem: Frequentist vs Bayesian approaches
-
-### 4.1 Frequentist
-
-### 4.2 Bayesian
 
 
