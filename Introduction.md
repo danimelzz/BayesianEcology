@@ -1,4 +1,4 @@
-# Introduction
+# Lesson 1: Introduction and Bayesian Inference for proportions
 
 ## 1. Bayesian vs Frequentist
 ![Fig1](https://miro.medium.com/max/1932/0*eqNjjx0pcgm4_GPU.png)
