@@ -62,7 +62,7 @@ Finally:
 P(HIV+ ∣ 2nd ELISA+) = 0.1116 / 0.1204 = 0.93
 ```
 
-## 3. Inference for proportions
+## 3. Inference for proportions (discrete variables)
 ### 3.1 Frequentist approach using R
 <div style="text-align:center"><img src="https://oliveridleyproject.org/wp-content/uploads/2019/06/Green-turtle-with-fibropapillomatosis-tumors-Kenya.jpg" /></div>
 
