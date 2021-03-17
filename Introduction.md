@@ -101,7 +101,7 @@ When we have multiple prior probabilities, we need to calculate the likelihood f
 ```
 ## Calculating likelihood
 p <- seq(from=0.1, to=0.9, by=0.1)
-prior <- c(rep(0.06, 4), 0.52m rep(0.06, 4))
+prior <- c(rep(0.06, 4), 0.52, rep(0.06, 4))
 likelihood <- dbinom(4, size=20, prob=p)
 likelihood
 ```
@@ -131,8 +131,3 @@ sum (posterior)
 | Posterior P(model I data) | 0.1748|	0.4248|	0.2539|	0.0681|	0.0780|	0.0005|	  0.00|	  0.00| 	0.00|
 
 The model with p=0.2 has the highest posterior probability (=0.42). This is not surprising, because 4 out of 20 FP+ turtles from treatment group equals to 20%. Therefore, it's likely that there are differences between the efficacy of treatment and control groups. Note that posterior probability of p=0.5 dropped from 52% (prior belief) to 7.8% (posterior), which demonstrates how we update our beliefs.  
-
-### 3.3 Sample size affects posterior probabilities
-
-
-
