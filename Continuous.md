@@ -14,7 +14,8 @@ Discrete and continuous variables have different probability functions. See:
 - Probability mass function (pmf): used for discrete variables (e.g., in binomial distributions); pmf tells us the probability that the random variable takes each of the possible values
 - Probability density function (pdf): used for continuous variables (e.g., in normal distributions); because continuous variables have probability zero of taking any single value, we can only talk about the probability within some interval (i.e. the area between two values under a pdf curve)
 
-https://miro.medium.com/max/1156/1*MGABHsIerbdfG70sEL4ysA.png
+
+![Fig1](https://miro.medium.com/max/1156/1*MGABHsIerbdfG70sEL4ysA.png)
 
 ## 2.2 Conjugate families
 
