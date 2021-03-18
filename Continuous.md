@@ -24,15 +24,13 @@ Before explain the Bayesian Inference for continuous variables, three concepts m
 (iii) What is **conjugacy**? A brief overview:
 
 - Non-conjugacy:  there is usually no simple mathematical expression, and one must resort to computation. 
-- Conjugacy: occurs when the posterior distribution is in the same family of probability density functions (pdf) as the prior belief, but with new parameter values, which have been updated to reflect what we have learned from the data. 
+- Conjugacy: occurs when the posterior distribution is in the same family of probability density functions (pdf) as the prior belief, but with new parameter values, which have been updated to reflect what we have learned from the data. For example, if your Binomial distribution is Bin(n,p), your prior belief about p is beta (x, y), and the number of success is 10 out of 50, hence your posterior distribution will be p|x ~ beta (x+10, y+50-10)
 
 Finally, let's remember the Bayes' rule used for discrete variables:
 
 ![Fig3](https://camo.githubusercontent.com/1245d0488d557c84c524d03b414e6db823aa173eb1c191d0af4d7d7824c76f0e/68747470733a2f2f77696b696d656469612e6f72672f6170692f726573745f76312f6d656469612f6d6174682f72656e6465722f7376672f32363334653339356634376161663136663564656235623039613937396166633634366438336562)
 
-Bayes' rule doesn't apply to continuous variables, because the denominator sums over all possible values. Thus, it's less intuitive calculating all values from an interval with infinite values for continuous variables. To complete this task, one must perform integration:
-
-![Fig4](https://www.statisticalengineering.com/images/Bayes_Theorem.gif)
+Classical Bayes' rule doesn't apply to continuous variables, because the denominator sums over all possible values. Thus, it's less intuitive calculating all values from an interval with infinite values for continuous variables. To complete this task, one must perform integration. Some authors point the limited computational power to calculate integrals as the main reason for the lack of popularity of Bayesian Inference throughout the 20th century.
 
 ## 2.2 Conjugate families
 There is an infinite number of pmfs and pdfs, but some distributions are so important that they receive their own name: 
