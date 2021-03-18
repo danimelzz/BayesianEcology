@@ -30,7 +30,9 @@ Finally, let's remember the Bayes' rule used for discrete variables:
 
 ![Fig3](https://camo.githubusercontent.com/1245d0488d557c84c524d03b414e6db823aa173eb1c191d0af4d7d7824c76f0e/68747470733a2f2f77696b696d656469612e6f72672f6170692f726573745f76312f6d656469612f6d6174682f72656e6465722f7376672f32363334653339356634376161663136663564656235623039613937396166633634366438336562)
 
-Bayes' rule doesn't apply to continuous variables, because the denominator sums over values. It's impossible to calculate all values from an interval with infinite values. 
+Bayes' rule doesn't apply to continuous variables, because the denominator sums over all possible values. Thus, it's less intuitive calculating all values from an interval with infinite values for continuous variables. To complete this task, one must perform integration:
+
+![Fig4](https://www.statisticalengineering.com/images/Bayes_Theorem.gif)
 
 ## 2.2 Conjugate families
 There is an infinite number of pmfs and pdfs, but some distributions are so important that they receive their own name: 
