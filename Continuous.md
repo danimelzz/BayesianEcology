@@ -44,6 +44,20 @@ There is an infinite number of pmfs and pdfs, but some distributions are so impo
 
 A frequentist statistician could use Binomial distribution to resolve this problem. A Bayesian statistician could use beta distribution to resolve this problem. If the researcher decides that she has not any prior information about the new serum, she can use uniform distribution: p ~ Uniform (0,1) = beta (1,1). The posterior probability will be: p|x ~ beta (1+0, 1+4) => p|x ~ beta (1, 5). The mean beta will be x/(x+y) = 1/5+1 = 1/6. We promised not to do much calculus, so I hope you will trust me to tell you that this Bayesian now believes that her posterior probability that p<0.5 is 0.96875.
 
+```
+ Suppose now that we mark a sample of 10 fish with radio tags, follow them for 1 year, and determine that 6 of the 10 survive. Given our vague (uniform) prior on p, the posterior distribution can be gotten exactly by
+a<-1
+b<-1
+n<-4
+x<-0
+
+p<-seq(0,1,0.001)
+prior<-dbeta(p,a,b)
+post<-dbeta(p,a+x,b+n-x)
+plot(p,post,lty=1,lwd=1)
+lines(p,prior,col="red",lty=2,lwd=3)
+```
+
 **Example 2: Gamma-Poisson** Let's talk about Gamma-Poisson conjugate family. In this case the data come from a Poisson distribution, and the prior and posterior are both gamma distributions. The Poisson random variable can take any non-negative integer value all the way up to infinity. It is used in describing count data, where one counts the number of independent events that occur in a fixed amount of time, a fixed area, or a fixed volume.
 
 Moreover, the Poisson distribution has been used to describe the number of phone calls one receives in an hour. Or, the number of pediatric cancer cases in the city, for example, to see if pollution has elevated the cancer rate above that of in previous years or for similar cities. It is also used in medical screening for diseases, such as HIV, where one can count the number of T-cells in the tissue sample.
