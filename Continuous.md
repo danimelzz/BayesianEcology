@@ -24,7 +24,7 @@ Before explain the Bayesian Inference for continuous variables, three concepts m
 (iii) What is **conjugacy**? A brief overview:
 
 - Non-conjugacy:  there is usually no simple mathematical expression, and one must resort to computation. 
-- Conjugacy: occurs when the posterior distribution is in the same family of probability density functions (pdf) as the prior belief, but with new parameter values, which have been updated to reflect what we have learned from the data. For example, if your Binomial distribution is Bin(n,p), your prior belief about p is beta (x, y), and the number of success is 10 out of 50, hence your posterior distribution will be p|x ~ beta (x+10, y+50-10)
+- Conjugacy: occurs when the posterior distribution is in the same family of probability density functions (pdf) as the prior belief, but with new parameter values, which have been updated to reflect what we have learned from the data. For example, if your Binomial distribution is Bin(n,p), your prior belief about p is beta (x, y), and the number of success is 10 out of 50, hence your posterior distribution will be p|x ~ beta (x+10, y+50-10) and your mean beta will be x/(x+y) 
 
 Finally, let's remember the Bayes' rule used for discrete variables:
 
@@ -38,10 +38,16 @@ There is an infinite number of pmfs and pdfs, but some distributions are so impo
 - Continuous: normal, uniform, beta, gamma
 - Discrete: binomial, Poisson
 
-**Example 1: Beta-Binomial** Let's talk about Beta-Binomial distribution. Suppose that a new serum against the venom of *Bothrops jararaca* is being tested. 800 mice which receveid the jararaca venom were separated in two groups: 400 mice were treated with the old serum (group A) and 400 mice were treated with the new serum (group B). Among the group B, all treatments were successful. Among the group A, fours mice have died. Could we infer that the new serum (group B) is more effective than the old serum (group A)? 
+**Example 1: Beta-Binomial** Let's talk about Beta-Binomial conjugate family. Suppose that a new serum against the venom of *Bothrops jararaca* is being tested. 800 mice which receveid the jararaca venom were separated in two groups: 400 mice were treated with the old serum (group A) and 400 mice were treated with the new serum (group B). Among the group B, all treatments were successful. Among the group A, fours mice have died. Could we infer that the new serum (group B) is more effective than the old serum (group A)? 
 
 ![Fig4](https://biologo.com.br/bio/wp-content/uploads/2018/05/jararaca.jpg)
 
-A frequentist statistician could use Binomial distribution to resolve this problem. A Bayesian statistician could use beta distribution to resolve this problem. If the researcher decides that she has not any prior information about the new serum, she can use uniform distribution: p ~ Uniform (0,1) = beta (1,1).
+A frequentist statistician could use Binomial distribution to resolve this problem. A Bayesian statistician could use beta distribution to resolve this problem. If the researcher decides that she has not any prior information about the new serum, she can use uniform distribution: p ~ Uniform (0,1) = beta (1,1). The posterior probability will be: p|x ~ beta (1+0, 1+4) => p|x ~ beta (1, 5). The mean beta will be x/(x+y) = 1/5+1 = 1/6. We promised not to do much calculus, so I hope you will trust me to tell you that this Bayesian now believes that her posterior probability that p<0.5 is 0.96875.
+
+**Example 2: Gamma-Poisson** Let's talk about Gamma-Poisson conjugate family. In this case the data come from a Poisson distribution, and the prior and posterior are both gamma distributions. The Poisson random variable can take any non-negative integer value all the way up to infinity. It is used in describing count data, where one counts the number of independent events that occur in a fixed amount of time, a fixed area, or a fixed volume.
+
+Moreover, the Poisson distribution has been used to describe the number of phone calls one receives in an hour. Or, the number of pediatric cancer cases in the city, for example, to see if pollution has elevated the cancer rate above that of in previous years or for similar cities. It is also used in medical screening for diseases, such as HIV, where one can count the number of T-cells in the tissue sample.
+
+
 
 ## 2.3 Credible Intervals and Inference
