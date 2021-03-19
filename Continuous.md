@@ -6,7 +6,7 @@ This lesson aims to present a continuous version of Bayes' Rule with and without
 
 Before explain the Bayesian Inference for continuous variables, three concepts must be clarified: (i) probability functions, (ii) elicitation, and (iii) conjugacy. 
 
-Discrete and continuous variables have different **probability functions**. See:
+(i) Discrete and continuous variables have different **probability functions**. See:
 
 - Probability mass function (pmf): used for discrete variables (e.g., in binomial distributions); pmf tells us the probability that the random variable takes each of the possible values
 - Probability density function (pdf): used for continuous variables (e.g., in normal distributions); because continuous variables have probability zero of taking any single value, we can only talk about the probability within some interval (i.e. the area between two values under a pdf curve)
@@ -38,8 +38,10 @@ There is an infinite number of pmfs and pdfs, but some distributions are so impo
 - Continuous: normal, uniform, beta, gamma
 - Discrete: binomial, Poisson
 
-**Example 1** Let's talk about Beta-Binomial distribution. Suppose that a new serum against the venom of *Bothrops jararaca* is being tested. 800 mice which receveid the jararaca venom were separated in two groups: 400 mice were treated with the old serum (group A) and 400 mice were treated with the new serum (group B). Among the 
+**Example 1: Beta-Binomial** Let's talk about Beta-Binomial distribution. Suppose that a new serum against the venom of *Bothrops jararaca* is being tested. 800 mice which receveid the jararaca venom were separated in two groups: 400 mice were treated with the old serum (group A) and 400 mice were treated with the new serum (group B). Among the group B, all treatments were successful. Among the group A, fours mice have died. Could we infer that the new serum (group B) is more effective than the old serum (group A)? 
 
 ![Fig4](https://biologo.com.br/bio/wp-content/uploads/2018/05/jararaca.jpg)
+
+A frequentist statistician could use Binomial distribution to resolve this problem. A Bayesian statistician could use beta distribution to resolve this problem. If the researcher decides that she has not any prior information about the new serum, she can use uniform distribution: p ~ Uniform (0,1) = beta (1,1).
 
 ## 2.3 Credible Intervals and Inference
