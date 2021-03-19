@@ -32,7 +32,7 @@ library(ggthemes)
 ```
 
 ## About the instructor
-- [Daniel Y. M. Nakamura](http://www.instagram.com/danimelzz) 
+- [Daniel Y. M. Nakamura](http://www.instagram.com/danimelsz) 
 
 ## Lessons
 - [Introduction: Frequentist vs Bayesian, Bayes' Rule, and Inference for proportions](https://danimelzz.github.io/BayesianEcology/Introduction)<br>
