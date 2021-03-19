@@ -6,7 +6,7 @@ This lesson aims to present a continuous version of Bayes' Rule with and without
 
 Before explain the Bayesian Inference for continuous variables, three concepts must be clarified: (i) probability functions, (ii) elicitation, and (iii) conjugacy. 
 
-(i) Discrete and continuous variables have different **probability functions**. See:
+Discrete and continuous variables have different **probability functions**. See:
 
 - Probability mass function (pmf): used for discrete variables (e.g., in binomial distributions); pmf tells us the probability that the random variable takes each of the possible values
 - Probability density function (pdf): used for continuous variables (e.g., in normal distributions); because continuous variables have probability zero of taking any single value, we can only talk about the probability within some interval (i.e. the area between two values under a pdf curve)
@@ -30,7 +30,7 @@ Finally, let's remember the Bayes' rule used for discrete variables:
 
 ![Fig3](https://camo.githubusercontent.com/1245d0488d557c84c524d03b414e6db823aa173eb1c191d0af4d7d7824c76f0e/68747470733a2f2f77696b696d656469612e6f72672f6170692f726573745f76312f6d656469612f6d6174682f72656e6465722f7376672f32363334653339356634376161663136663564656235623039613937396166633634366438336562)
 
-Classical Bayes' rule doesn't apply to continuous variables, because the denominator sums over all possible values. Thus, it's less intuitive calculating all values from an interval with infinite values for continuous variables. To complete this task, one must perform integration. Some authors point the limited computational power to calculate integrals as the main reason for the lack of popularity of Bayesian Inference throughout the 20th century.
+Classical Bayes' rule doesn't apply to continuous variables, because the denominator P (B) sums over all possible values. Thus, it's less intuitive calculating all values from an interval with infinite values for continuous variables. To complete this task, one must perform **integrals**. Some authors point the limited computational power to calculate integrals as the main reason for the lack of popularity of Bayesian Inference throughout the 20th century.
 
 ## 2.2 Conjugate families
 There is an infinite number of pmfs and pdfs, but some distributions are so important that they receive their own name: 
@@ -38,7 +38,8 @@ There is an infinite number of pmfs and pdfs, but some distributions are so impo
 - Continuous: normal, uniform, beta, gamma
 - Discrete: binomial, Poisson
 
+**Example 1** Let's talk about Beta-Binomial distribution. Suppose that a new serum against the venom of *Bothrops jararaca* is being tested. 800 mice which receveid the jararaca venom were separated in two groups: 400 mice were treated with the old serum (group A) and 400 mice were treated with the new serum (group B). Among the 
 
-The property that the posterior distribution follows the same parametric form as the prior distribution is called **conjugacy**. In other words, if the posterior distributions p(θ | x) are in the same probability distribution family as the prior probability distribution p(θ), the prior and posterior are then called conjugate distributions, and the prior is called a conjugate prior for the likelihood function p(x | θ).
+![Fig4](https://biologo.com.br/bio/wp-content/uploads/2018/05/jararaca.jpg)
 
 ## 2.3 Credible Intervals and Inference
